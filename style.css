@@ -96,30 +96,65 @@ input {
 
 #sidebar {
     display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px repeat(9, 50px);
     background-color: rgb(20, 104, 201);
     color: white;
     grid-row: 1 / span 3;
-    grid-column: 1;
+    padding-left: 10px;
 }
 
-#sidebar > .sidebar-title {
+/* #sidebar > .sidebar-title {
     display: grid;
-    grid-column: 1;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / span 2;
     grid-row: 1;
+    font-size: 18px;
+    font-weight: bold;
+} */
+
+.dashboard {
+    font-weight: bold;
     font-size: 18px;
 }
 
-#sidebar > .sidebar-first {
+#sidebar > div {
     display: grid;
     grid-column: 1;
+    grid-template-columns: 30px 100px;
+    grid-template-rows: 50px;
+    gap: 5px;
+    align-items: center;
+}
+
+#sidebar > div > div {
+    grid-column: 2;
+    justify-items: left;
+}
+
+.svg {
+    grid-column: 1;
+    height: 20px; 
+    width: 20px;
+    justify-self: start;
+}
+
+.dash-svg {
+    height: 30px;
+    width: 30px;
+}
+
+#sidebar > .sidebar-first {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    grid-column: 1 /span 2;
     grid-row: 2;
 }
 
 #sidebar > .sidebar-second {
-    display: grid;
-    grid-column: 1;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    grid-column: 1 /span 2;
     grid-row: 3;
 }
 
